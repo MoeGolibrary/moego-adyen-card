@@ -1,14 +1,12 @@
-require "json"
-package = JSON.parse(File.read(File.join(__dir__, "package.json")))
 
 Pod::Spec.new do |s|
   s.name         = "moego-adyen-card"
   s.module_name  = "mogeoAdyenCard"
-  s.version      = package["version"]
-  s.summary      = package["description"]
-  s.homepage     = package["homepage"]
-  s.license      = package["license"]
-  s.authors      = package["author"]
+  s.version      = "0.1.0"
+  s.summary      = "Provide a custom Adyen Card payment component to the RN layer"
+  s.homepage     = "https://www.moego.pet/"
+  s.license      = "ISC"
+  s.authors      = "moego"
 
   s.platform     = :ios, "13.4"
   s.source       = { :git => "https://github.com/MoeGolibrary/moego-adyen-card.git", :tag => "#{s.version}" }
